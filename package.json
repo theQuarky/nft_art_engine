@@ -26,9 +26,13 @@
   "dependencies": {
     "canvas": "^2.8.0",
     "gif-encoder-2": "^1.0.5",
-    "sha1": "^1.1.1"
+    "sha1": "^1.1.1",
+    "tsc": "^2.0.4",
+    "typescript": "^4.9.5"
   },
   "devDependencies": {
-    "@types/node": "^18.15.3"
+    "@types/gif-encoder": "^0.7.1",
+    "@types/node": "^18.15.3",
+    "@types/sha1": "^1.1.3"
   }
 }

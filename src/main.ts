@@ -105,7 +105,7 @@ interface IMappedDnaToLayers {
 }
 
 const layersSetup: Function = (layersOrder: { name: string }[]) => {
-  const layers: ILayers[] = layersOrder.map((layerObj: { name: string, options?: string }, index: number) => ({
+  const layers: ILayers[] = layersOrder.map((layerObj: { name: string, options?: any }, index: number) => ({
     id: index,
     elements: getElements(`${layersDir}/${layerObj.name}/`),
     name:
@@ -189,7 +189,7 @@ const addMetadata: Function = (_dna: string, _edition: number) => {
   attributesList = [];
 };
 
-const addAttributes: Function = (_element) => {
+const addAttributes: Function = (_element:any) => {
   let selectedElement = _element.layer.selectedElement;
   attributesList.push({
     trait_type: _element.layer.name,
@@ -321,7 +321,7 @@ const createDna: Function = (_layers: ILayers[]) => {
   return randNum.join(DNA_DELIMITER);
 };
 
-const writeMetaData: Function = (_data) => {
+const writeMetaData: Function = (_data:string) => {
   fs.writeFileSync(`${buildDir}/json/_metadata.json`, _data);
 };
 
