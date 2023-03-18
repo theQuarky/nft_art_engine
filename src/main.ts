@@ -2,7 +2,7 @@ const basePath: string = process.cwd();
 import NETWORK from "../constants/network";
 import fs from "fs";
 import sha1 from "sha1";
-import { Canvas, createCanvas, loadImage, NodeCanvasRenderingContext2D } from "canvas";
+import { Canvas, createCanvas, loadImage, CanvasRenderingContext2D } from "canvas";
 
 const buildDir: string = `${basePath}/build`;
 const layersDir: string = `${basePath}/layers`;
@@ -26,7 +26,7 @@ import {
 import HashlipsGiffer from "../modules/HashlipsGiffer";
 
 const canvas: Canvas = createCanvas(format.width, format.height);
-const ctx: NodeCanvasRenderingContext2D = canvas.getContext("2d");
+const ctx: CanvasRenderingContext2D = canvas.getContext("2d");
 ctx.imageSmoothingEnabled = format.smoothing;
 var metadataList: any[] = [];
 var attributesList: { trait_type: string; value: string }[] = [];

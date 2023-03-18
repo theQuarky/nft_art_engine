@@ -12,7 +12,8 @@
     ]
   },
   "scripts": {
-    "build": "node index.js",
+    "start": "yarn build && node dist/index.js",
+    "build": "npx tsc",
     "generate": "node index.js",
     "rarity": "node utils/rarity.js",
     "preview": "node utils/preview.js",
@@ -24,7 +25,7 @@
   "author": "Daniel Eugene Botha (HashLips)",
   "license": "MIT",
   "dependencies": {
-    "canvas": "^2.8.0",
+    "canvas": "^2.11.0",
     "gif-encoder-2": "^1.0.5",
     "sha1": "^1.1.1",
     "tsc": "^2.0.4",

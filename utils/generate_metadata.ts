@@ -75,11 +75,11 @@ const draw: Function = (_imgObject: {
     path: string;
   };
   loadedImage: Image;
-} | undefined) => {
+}) => {
 
   let w: number = canvas.width;
   let h: number = canvas.height;
-  ctx.drawImage(_imgObject?.loadedImage, 0, 0, w, h);
+  ctx.drawImage(_imgObject.loadedImage, 0, 0, w, h);
 };
 
 const addRarity: Function = () => {
@@ -87,7 +87,7 @@ const addRarity: Function = () => {
   let h: number = canvas.height;
   let i: number = -4;
   let count: number = 0;
-  let imgdata: ImageData = ctx.getImageData(0, 0, w, h);
+  let imgdata = ctx.getImageData(0, 0, w, h);
   let rgb: Uint8ClampedArray = imgdata.data;
   let newRgb: { r: number, g: number, b: number } = { r: 0, g: 0, b: 0 };
   const tolerance: number = 15;
